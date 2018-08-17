@@ -10,6 +10,7 @@
       <%  @cocktails.each do |cocktail|%>
         <li>
           <%= link_to cocktail.name, cocktail_path(cocktail)%>
+          <%= cl_image_tag("hoiplx2hyl8rauqsvfz8", width: 400, height: 300, crop: :fill) %>
           <%= link_to "delete", cocktail_path(cocktail), method: :delete,
       data: { confirm: "Are you sure?" }%> |
           <%= link_to "Edit", edit_cocktail_path(cocktail) %>
